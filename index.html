@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container bg-primary py-5 mb-4 text-center" ID="Top">
+        <div class="top-container">
+            <h1>HIPPIE TRAIN</h1>
+            <h1>Come with us to "Trip The Light Fandango!"</h1>
+            <h2>Current Time:
+                <span id="time"></span>
+            </h2>
+        </div>
+    </div>
+    <div class="container px-0">
+        <div class="card mb-4">
+            <h4 class="card-headers rounded-0 bg-primary text-center">Current Train Schedule</h4>
+            <div class="card-body">
+                <table class="table table-hover" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Desitination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container px-0">
+        <div class="card mb-4">
+            <h4 class="card-headers rounded-0 bg-primary">Add New Train Information</h4>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="trname-ip" class="input-style">Train Name</label>
+                        <input type="text" class="form-control" id="trname-ip">
+                    </div>
+                    <div class="form-group">
+                        <label for="trdest-ip" class="input-style">Destination</label>
+                        <input type="text" class="form-control" id="trdest-ip">
+                    </div>
+                    <div class="form-group">
+                        <label for="trfirsttime-ip" class="input-style">First Train Time (HH:mm - military time)</label>
+                        <input data-format=" hh:mm" type="text" class="form-control" id="trfirsttime-ip">
+                    </div>
+                    <div class="form-group">
+                        <label for="trfreq-ip" class="input-style">Frequency (min)</label>
+                        <input type="number" class="form-control" id="trfreq-ip">
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-0" id="add-train">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+#Top {
+  background-image: url("../images/Hippie4.png");
+  background-position: cover;
+}
+h1,
+h2 {
+  color: white;
+  text-shadow: 2px 2px 6px limegreen;
+  font-size: 36px;
+  font-weight: bold;
+}
+.input-style {
+  font-weight: bold;
+}
+h4 {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px limegreen;
+}
